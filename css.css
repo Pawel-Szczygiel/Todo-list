@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  font-family: "Open Sans", "Montserrat", sans-serif;
+  background-color: rgb(185, 196, 189);
+}
+
+h1 {
+  color: white;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+.todo {
+  width: 800px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 7px 7px 9px rgba(82, 82, 82, 0.4);
+  text-align: center;
+}
+
+.header {
+  border-radius: 5px 5px 0 0;
+  padding: 40px;
+  border: 2px solid white;
+
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(25, 163, 20),
+    rgb(24, 143, 223)
+  );
+}
+
+.todoInput {
+  width: 80%;
+  padding: 10px 20px;
+  margin-right: 30px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  color: rgb(79, 82, 92);
+  transition: all 0.5s;
+}
+.todoInput:focus {
+  box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.91);
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.91);
+  -moz-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.91);
+  background-color: rgb(0, 0, 0, 0.3);
+  color: #f9f2f2;
+}
+.todoInput:focus::placeholder {
+  color: #000000;
+}
+
+.alertInfo {
+  margin-top: 20px;
+  color: goldenrod;
+  font-family: cursive;
+}
+
+.addBtn {
+  padding: 10px 15px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 4px 1px #000000;
+  border-radius: 5px;
+  color: #181414;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: border-color 0.5s, color 0.5s;
+}
+
+.addBtn:hover {
+  border-color: #f9f2f2;
+  color: white;
+}
+
+
+.todoList {
+  padding: 20px 0;
+  background-color: #ffffff;
+}
+
+.todoList h3 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.todoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding-left: 25px;
+  padding-right: 10px;
+  text-align: left;
+  list-style: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  /* background-color: rgb(24, 143, 223,0.4); */
+  background-image: linear-gradient(to top left, black, yellow);
+
+  color: black;
+  font-weight: bold;
+  /* font-size: 18px; */
+}
+
+.tools {
+  display: inline-block;
+}
+
+.tools button {
+  padding: 15px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tools button:hover {
+  /* background-color: #ddd; */
+  background-color: #050505af;
+  border-radius: 5px;
+}
+
+.complete {
+  color: rgb(15, 179, 69);
+  font-size: 16px;
+    transform: all 2s;
+}
+.rotate{
+    transform: rotate(360deg);
+}
+
+.edit {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(63, 169, 240);
+}
+
+.delete {
+  font-size: 16px;
+  color: tomato;
+}
+
+.completed {
+  font-size: 10px;
+  color: grey;
+ 
+}
+
+.popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  color: #f9f2f2;
+  background-image: linear-gradient(
+    to left,
+    rgb(15, 231, 69),
+    rgb(13, 94, 216)
+  );
+  border-radius: 5px;
+}
+
+.popup h3 {
+  padding: 20px;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+
+.popupInfo {
+  color: #f9f2f2;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.popupBody {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 10px;
+}
+
+.popupInput {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.91);
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.91);
+  -moz-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.91);
+  background-color: rgb(0, 0, 0, 0.3);
+  color: #f9f2f2;
+}
+
+.popupInput::placeholder {
+  color: black;
+}
+
+.popupBtn {
+  width: 30%;
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 20px 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.cancel:hover {
+  color: rgb(248, 17, 17);
+  border-color: rgb(240, 20, 20);
+}
+
+.accept:hover {
+  color: rgb(5, 201, 5);
+  border-color: rgb(21, 219, 21);
+}
